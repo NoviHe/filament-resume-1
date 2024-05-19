@@ -35,7 +35,7 @@ class SendMessageToEndUser extends Mailable
     {
         return new Envelope(
             from: new Address('noovv9@gmail.com', get_setting_value('_site_name')),
-            subject: 'Send Message To End User',
+            subject: 'Your message has been sent!',
         );
     }
 

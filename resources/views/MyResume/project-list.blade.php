@@ -1,12 +1,20 @@
-<div>
+@extends('MyResume.layouts.app')
+@section('content')
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <i class="bx bx-left-arrow-circle bx-lg"></i>
+            <span class="fs-4"> {{ get_setting_value('_site_name') }}</span>
+        </a>
+    </header>
+
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
                 <h2>Portfolio</h2>
-                <p>List Project yang pernah dikerjakan untuk client maupun project untuk dijual berupa Source Code dll.
-                    Disediakan demo project nya juga, clik gambar untuk lebih lengkap</p>
+                {{-- <p>List Project yang pernah dikerjakan untuk client maupun project untuk dijual berupa Source Code dll.
+                    Disediakan demo project nya juga, clik gambar untuk lebih lengkap</p> --}}
             </div>
 
             <div class="row">
@@ -44,13 +52,6 @@
 
             </div>
 
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <a href="{{ route('project-list') }}" class="btn btn-lg text-bg-dark"
-                        style="background-color: #0563bb !important">Show More..</a>
-                </div>
-            </div>
-
         </div>
     </section><!-- End Portfolio Section -->
-</div>
+@endsection

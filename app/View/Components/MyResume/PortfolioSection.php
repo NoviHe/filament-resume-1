@@ -24,7 +24,7 @@ class PortfolioSection extends Component
     public function render(): View
     {
         $categories = ProjectCategory::all();
-        $projects = Project::with('category')->get();
+        $projects = Project::with('category')->where('published', true)->latest()->get()->take(10);
         return view('components.my-resume.portfolio-section', compact('categories', 'projects'));
     }
 }

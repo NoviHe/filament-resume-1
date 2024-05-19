@@ -57,12 +57,14 @@
     <!-- ======= Mobile nav toggle button ======= -->
     <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
     <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
-    <!-- ======= Header ======= -->
-    <header id="header" class="d-flex flex-column justify-content-center">
+    @if (Route::current()->getName() != 'project-list')
+        <!-- ======= Header ======= -->
+        <header id="header" class="d-flex flex-column justify-content-center">
 
-        <x-my-resume.navbar-component />
+            <x-my-resume.navbar-component />
 
-    </header><!-- End Header -->
+        </header><!-- End Header -->
+    @endif
 
     @if (Route::current()->getName() === 'home')
         @if (get_visibility_section('_home'))
